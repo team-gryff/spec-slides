@@ -131,9 +131,9 @@ export default class Presentation extends React.Component {
               render
             </Heading>
             <List>
-              <Appear><ListItem>Postions of nodes are first calculated using D3</ListItem></Appear>
-              <Appear><ListItem>Nodes are rendered using React</ListItem></Appear>
-              <Appear><ListItem>Post-render links are generated using node positions</ListItem></Appear>
+              <ListItem>Postions of nodes are first calculated using D3</ListItem>
+              <ListItem>Nodes are rendered using React</ListItem>
+              <ListItem>Post-render links are generated using node positions</ListItem>
             </List>
           </Slide>
           <Slide>
@@ -143,29 +143,43 @@ export default class Presentation extends React.Component {
             <StateSync />
             <Appear fid="2"><CodePane
               lang="jsx"
-              source={require("raw!../assets/statesync.example")}
+              source={require("raw!../assets/statesync_before.example")}
               margin="0pfx auto"
             />
             </Appear>
             <Appear fid="3"><CodePane
               lang="jsx"
-              source={require("raw!../assets/statesync.example")}
+              source={require("raw!../assets/statesync_after.example")}
               margin="20px auto"
             />
             </Appear>
           </Slide>
           <Slide>
             <Heading caps>Check Us Out</Heading>
-            <Text>@react-monocle</Text>
-          <Layout>
-            <Fill>
-            <Image src="http://newmerator.github.io/blacktocat.png" width="50%" height="50%"/>
-            </Fill>
-            <Fill>
-            <Fit />
-            <Image src="https://www.npmjs.com/static/images/npm-logo.svg" width="50%" height="50%"/>
-            </Fill>
-          </Layout></Slide>
+            <div style={{marginTop: 50}} >
+              <div style={{display: 'flex', marginLeft: 200}}>
+                <Image margin="5" padding="0" src="http://newmerator.github.io/blacktocat.png" width="8%" height="8%" />
+                <Text 
+                  margin="10"
+                  textColor="white" 
+                  textAlign="right" 
+                  textSize="24"
+                  lineHeight="2">
+                    github.com/team-gryff/react-monocle
+                </Text>
+              </div>  
+              <div style={{display: 'flex', marginLeft: 200}}>
+                <Image margin="8" padding="0" src="https://www.npmjs.com/static/images/npm-logo.svg" width="10%" height="10%"/>
+                <Text 
+                  margin="10"
+                  textColor="white" 
+                  textAlign="right" 
+                  textSize="24">
+                    npmjs.com/package/react-monocle
+                </Text>  
+              </div>
+            </div>
+          </Slide>
         </Deck>
       </Spectacle>
     );
