@@ -1,6 +1,6 @@
 import React from "react";
-import d3 from 'd3';
-console.log(d3);
+
+
 
 // Import Spectacle Core tags
 import {
@@ -32,13 +32,18 @@ import createTheme from "spectacle/lib/themes/default";
 
 // Import custom component
 import Interactive from "../assets/interactive";
-import Graph from './components/Graph.jsx';
+// import Graph from './components/Graph.jsx';
 import StateSync from './components/StateSync.jsx';
 import gameTree from './gameTree';
 
 // Require CSS
 require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
+
+const images = {
+  logo: require('../assets/monocle_logo.svg'),
+  textLogo: require('../assets/monocle_type_logo.svg'),
+}
 
 const theme = createTheme({
   primary: "#3498DB"
@@ -51,7 +56,7 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Spectacle theme={theme}>
-        <Deck transition={["zoom", "slide"]} transitionDuration={300} progress="none">
+        <Deck transition="slide" transitionDuration={500} progress="none">
           <Slide>
             <Heading size={1} fit caps lineHeight={1} textColor="white">
             react monocle
@@ -63,6 +68,7 @@ export default class Presentation extends React.Component {
               made for <span style={{color: '#61DAFB'}}>ReactJS</span>
             </Heading>
             <Text textColor="black" textSize="24">created by: michael-bryant choa, jenna davis, and jerry mao</Text>
+            <Image src={images.logo} margin="10px auto 0px" height="300px"/>
           </Slide>
           <Slide>
             <Heading caps>
@@ -75,16 +81,14 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide>
             <Heading>
-              SOLUTION
+              SOLUTION?
             </Heading>
-            <Appear fid="1">
-              <Heading size={4} textColor="#61DAFB">
-              REACT MONOCLE
-              </Heading>
-            </Appear>
-            <Appear fid="2">
-              <Text>
-              A developer tool that visually displays React component hierarchy along with key component information.
+          </Slide>
+          <Slide transition="fade">
+              <Image src={images.textLogo} margin="10px auto 20px" height="300px"/>
+            <Appear>
+              <Text textColor="white">
+              A developer tool that visually displays <span style={{color: '#61DAFB'}}>React component hierarchy</span> along with key component information.
               </Text>
             </Appear>
           </Slide>
@@ -92,7 +96,7 @@ export default class Presentation extends React.Component {
             <Heading>GIF</Heading>
           </Slide>
           <Slide>
-
+          our app here
           </Slide>
 
           <Slide>
@@ -137,6 +141,18 @@ export default class Presentation extends React.Component {
             state sync
             </Heading>
             <StateSync />
+            <Appear fid="2"><CodePane
+              lang="jsx"
+              source={require("raw!../assets/statesync.example")}
+              margin="0pfx auto"
+            />
+            </Appear>
+            <Appear fid="3"><CodePane
+              lang="jsx"
+              source={require("raw!../assets/statesync.example")}
+              margin="20px auto"
+            />
+            </Appear>
           </Slide>
           <Slide>
             <Heading caps>Check Us Out</Heading>

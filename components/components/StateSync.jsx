@@ -2,20 +2,26 @@ import React from "react";
 import { tree, hierarchy, select, path } from "d3";
 const cloneDeep = require("lodash.clonedeep");
 import StateNode from "./StateNode.jsx";
+import preloader from "spectacle/lib/utils/preloader";
+import { Image } from 'spectacle';
 
 const stateGraph = {
-  name: "main.js",
+  name: "main.jsx",
+  imageLink: 'https://freeiconshop.com/files/edd/js-outline.png',
   children: [
     {
       name: "monocle",
+      imageLink: 'http://i.imgur.com/SLBbHoO.png',
       children: [],
     },
     {
       name: "bundle.js",
+      imageLink: 'https://freeiconshop.com/files/edd/js-outline.png',
       children: [],
     },
   ]
 };
+
 
 
 export default class StateSync extends React.Component {
@@ -47,6 +53,7 @@ export default class StateSync extends React.Component {
         id={i}
         key={i}
         name={d.data.name}
+        imageLink={d.data.imageLink}
         width={this.state.nodeW}
         height={this.state.nodeH}
         />);
@@ -63,7 +70,7 @@ export default class StateSync extends React.Component {
     const links = this.state.d3nodes.links();
     select(document.getElementById("graphz"))
       .selectAll("path.link").data(links, d => { return d.target.id; })
-      .enter().insert("svg:path", "rect")
+      .enter().insert("svg:path", "g")
       .attr("class", "statelink")
       .attr("d", (node) => {
         const oldX = node.source.x;
@@ -90,21 +97,40 @@ export default class StateSync extends React.Component {
       // transform: `translate(-${this.state.nodeW / 2}px, 0px)`
     };
     return (
-      <svg height={this.state.height - 150} width={this.state.width - 150} style={svgStyle} >
+      <svg height={this.state.height-86} width={this.state.width - 150} style={svgStyle} >
         <g style={gStyle} id="graphz">
-        <path 
+        <path
+          fill="none"
           stroke="#455A64"
           strokeWidth="10"
           d="M 200 170 l 200 0"
+        />
+        <path
+          fill="none"
+          stroke="#455A64"
+          strokeWidth="10px"
+          d="M415,180C415,220,290,220,290,260"
+        />
+        <path
+          fill="none"
+          stroke="#455A64"
+          strokeWidth="10px"
+          d="M290,265 l3,-6l-6,0Z"
         />
           {this.state.nodes}
           <StateNode
             xtranslate={250}
             ytranslate={135}
-            name={'Redux'}
             width={80}
             height={40}
             />
+        <image
+        x="270"
+        y="145"
+        width="40"
+        height="40"
+        href="https://raw.githubusercontent.com/reactjs/redux/master/logo/logo.png"
+        />
         </g>
       </svg>
     );

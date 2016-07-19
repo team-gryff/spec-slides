@@ -14,15 +14,30 @@ function StateNode(props) {
     ry: '2px',
   }
 
-  const textStyle = {
-    x: '4px',
-    y: '10px',
-    dy: '0.5em'
-  }
-
   return (
+    <g>
     <rect style = {rectStyle}>
     </rect>
+    {props.name ? (
+      <text
+      x={props.xtranslate + 5}
+      y={props.ytranslate + props.height / 4 + 5}
+      fontSize="14px"
+      >
+      {props.name}
+    </text>) : null
+    }
+    {
+      props.imageLink ? (
+      <image
+        x={props.xtranslate + props.width / 4}
+        y={props.ytranslate + props.height / 2.5}
+        width="40"
+        height="40"
+        href={props.imageLink}
+        />) : null
+    }
+    </g>
   )
 
 
