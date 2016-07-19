@@ -92,7 +92,7 @@ export default class Presentation extends React.Component {
             <Heading>GIF</Heading>
           </Slide>
           <Slide>
-            <Graph treeData={gameTree}/>
+
           </Slide>
 
           <Slide>
