@@ -1,0 +1,224 @@
+{
+  "type": "JSXElement",
+  "start": 322,
+  "end": 433,
+  "openingElement": {
+    "type": "JSXOpeningElement",
+    "start": 322,
+    "end": 433,
+    "attributes": [
+      {
+        "type": "JSXAttribute",
+        "start": 342,
+        "end": 362,
+        "name": {
+          "type": "JSXIdentifier",
+          "start": 342,
+          "end": 345,
+          "name": "foo"
+        },
+        "value": {
+          "type": "JSXExpressionContainer",
+          "start": 346,
+          "end": 362,
+          "expression": {
+            "type": "MemberExpression",
+            "start": 347,
+            "end": 361,
+            "object": {
+              "type": "MemberExpression",
+              "start": 347,
+              "end": 357,
+              "object": {
+                "type": "ThisExpression",
+                "start": 347,
+                "end": 351
+              },
+              "property": {
+                "type": "Identifier",
+                "start": 352,
+                "end": 357,
+                "name": "state"
+              },
+              "computed": false
+            },
+            "property": {
+              "type": "Identifier",
+              "start": 358,
+              "end": 361,
+              "name": "foo"
+            },
+            "computed": false
+          }
+        }
+      },
+      {
+        "type": "JSXAttribute",
+        "start": 371,
+        "end": 391,
+        "name": {
+          "type": "JSXIdentifier",
+          "start": 371,
+          "end": 374,
+          "name": "bar"
+        },
+        "value": {
+          "type": "JSXExpressionContainer",
+          "start": 375,
+          "end": 391,
+          "expression": {
+            "type": "MemberExpression",
+            "start": 376,
+            "end": 390,
+            "object": {
+              "type": "MemberExpression",
+              "start": 376,
+              "end": 386,
+              "object": {
+                "type": "ThisExpression",
+                "start": 376,
+                "end": 380
+              },
+              "property": {
+                "type": "Identifier",
+                "start": 381,
+                "end": 386,
+                "name": "state"
+              },
+              "computed": false
+            },
+            "property": {
+              "type": "Identifier",
+              "start": 387,
+              "end": 390,
+              "name": "bar"
+            },
+            "computed": false
+          }
+        }
+      },
+      {
+        "type": "JSXAttribute",
+        "start": 400,
+        "end": 424,
+        "name": {
+          "type": "JSXIdentifier",
+          "start": 400,
+          "end": 405,
+          "name": "click"
+        },
+        "value": {
+          "type": "JSXExpressionContainer",
+          "start": 406,
+          "end": 424,
+          "expression": {
+            "type": "MemberExpression",
+            "start": 407,
+            "end": 423,
+            "object": {
+              "type": "ThisExpression",
+              "start": 407,
+              "end": 411
+            },
+            "property": {
+              "type": "Identifier",
+              "start": 412,
+              "end": 423,
+              "name": "handleClick"
+            },
+            "computed": false
+          }
+        }
+      }
+    ],
+    "name": {
+      "type": "JSXIdentifier",
+      "start": 323,
+      "end": 332,
+      "name": "Notorious"
+    },
+    "selfClosing": true
+  },
+  "closingElement": null,
+  "children": []
+},
+{
+  "type": "Literal",
+  "start": 433,
+  "end": 440,
+  "value": "\n      ",
+  "raw": "\n      "
+},
+{
+  "type": "JSXElement",
+  "start": 440,
+  "end": 486,
+  "openingElement": {
+    "type": "JSXOpeningElement",
+    "start": 440,
+    "end": 486,
+    "attributes": [
+      {
+        "type": "JSXAttribute",
+        "start": 457,
+        "end": 477,
+        "name": {
+          "type": "JSXIdentifier",
+          "start": 457,
+          "end": 460,
+          "name": "bar"
+        },
+        "value": {
+          "type": "JSXExpressionContainer",
+          "start": 461,
+          "end": 477,
+          "expression": {
+            "type": "MemberExpression",
+            "start": 462,
+            "end": 476,
+            "object": {
+              "type": "MemberExpression",
+              "start": 462,
+              "end": 472,
+              "object": {
+                "type": "ThisExpression",
+                "start": 462,
+                "end": 466
+              },
+              "property": {
+                "type": "Identifier",
+                "start": 467,
+                "end": 472,
+                "name": "state"
+              },
+              "computed": false
+            },
+            "property": {
+              "type": "Identifier",
+              "start": 473,
+              "end": 476,
+              "name": "bar"
+            },
+            "computed": false
+          }
+        }
+      }
+    ],
+    "name": {
+      "type": "JSXIdentifier",
+      "start": 441,
+      "end": 447,
+      "name": "Biggie"
+    },
+    "selfClosing": true
+  },
+  "closingElement": null,
+  "children": []
+},
+{
+  "type": "Literal",
+  "start": 486,
+  "end": 493,
+  "value": "\n      ",
+  "raw": "\n      "
+}
