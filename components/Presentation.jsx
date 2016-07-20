@@ -45,6 +45,8 @@ const images = {
   logo: require('../assets/monocle_logo.svg'),
   textLogo: require('../assets/monocle_type_logo.svg'),
   redux: require('../assets/redux.png'),
+  monocleApp: require('../assets/monocle_app.png'),
+  devApp: require('../assets/developer_app.png'),
 };
 
 const theme = createTheme({
@@ -129,18 +131,18 @@ export default class Presentation extends React.Component {
           </Layout></Slide>
           <Slide>
             <Layout>
-              <Fill><Text>Monocle App</Text></Fill>
+              <Image src={images.monocleApp} width="40%" height="40%" />
               <Appear>
                 <div>
-                  <Image src={images.redux} width="20%" height="20%"/>
+                  <Image src={images.redux} width="30%" height="30%"/>
                   <br />
                   <Image 
-                    width="25%"
+                    width="35%"
                     height="10%"
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Arrow_left.svg/2000px-Arrow_left.svg.png" />
                 </div>
               </Appear>
-              <Fill><Text>Developer App</Text></Fill>
+              <Fill><Image src={images.devApp} /></Fill>
             </Layout>
           </Slide>
           <Slide>
