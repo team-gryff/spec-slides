@@ -17,9 +17,14 @@ app.use(require("webpack-dev-middleware")(compiler, {
 
 app.use(require("webpack-hot-middleware")(compiler));
 
-app.get("*", function(req, res) {
+app.get("/app", function(req, res) {
+  res.sendFile(path.join(__dirname, "react-monocle.html"));
+});
+
+app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "index.html"));
 });
+
 
 app.listen(serverPort, "localhost", function (err) {
   if (err) {

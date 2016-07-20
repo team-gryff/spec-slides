@@ -35,6 +35,7 @@ import Interactive from "../assets/interactive";
 // import Graph from './components/Graph.jsx';
 import StateSync from './components/StateSync.jsx';
 import gameTree from './gameTree';
+import IFrame from './components/IFrame.jsx';
 
 // Require CSS
 require("normalize.css");
@@ -96,9 +97,8 @@ export default class Presentation extends React.Component {
             <Heading>GIF</Heading>
           </Slide>
           <Slide>
-          our app here
+            <IFrame width={window.innerWidth - 40} height={window.innerHeight + 80} src="/app" />
           </Slide>
-
           <Slide>
             <Heading caps>
               Parsing
@@ -126,16 +126,6 @@ export default class Presentation extends React.Component {
             />
             </Fill></Appear>
           </Layout></Slide>
-          <Slide>
-            <Heading caps>
-              render
-            </Heading>
-            <List>
-              <ListItem>Postions of nodes are first calculated using D3</ListItem>
-              <ListItem>Nodes are rendered using React</ListItem>
-              <ListItem>Post-render links are generated using node positions</ListItem>
-            </List>
-          </Slide>
           <Slide>
             <Heading caps>
             state sync
