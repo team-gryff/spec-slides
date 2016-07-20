@@ -44,7 +44,8 @@ require("spectacle/lib/themes/default/index.css");
 const images = {
   logo: require('../assets/monocle_logo.svg'),
   textLogo: require('../assets/monocle_type_logo.svg'),
-}
+  redux: require('../assets/redux.png'),
+};
 
 const theme = createTheme({
   primary: "#3498DB"
@@ -127,22 +128,20 @@ export default class Presentation extends React.Component {
             </Fill></Appear>
           </Layout></Slide>
           <Slide>
-            <Heading caps>
-            state sync
-            </Heading>
-            <StateSync />
-            <Appear fid="2"><CodePane
-              lang="jsx"
-              source={require("raw!../assets/statesync_before.example")}
-              margin="0pfx auto"
-            />
-            </Appear>
-            <Appear fid="3"><CodePane
-              lang="jsx"
-              source={require("raw!../assets/statesync_after.example")}
-              margin="20px auto"
-            />
-            </Appear>
+            <Layout>
+              <Fill><Text>Monocle App</Text></Fill>
+              <Appear>
+                <div>
+                  <Image src={images.redux} width="20%" height="20%"/>
+                  <br />
+                  <Image 
+                    width="25%"
+                    height="10%"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Arrow_left.svg/2000px-Arrow_left.svg.png" />
+                </div>
+              </Appear>
+              <Fill><Text>Developer App</Text></Fill>
+            </Layout>
           </Slide>
           <Slide>
             <Heading caps>Check Us Out</Heading>
