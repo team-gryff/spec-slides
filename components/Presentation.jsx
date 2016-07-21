@@ -83,11 +83,6 @@ export default class Presentation extends React.Component {
               <ListItem><span style={{color: 'white'}}>State changes</span> are difficult to track through deeply nested application structures</ListItem>
             </List>
           </Slide>
-          <Slide>
-            <Heading>
-              SOLUTION?
-            </Heading>
-          </Slide>
           <Slide transition="fade">
               <Image src={images.textLogo} margin="10px auto 20px" height="300px"/>
             <Appear>
