@@ -42,11 +42,16 @@ require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
 
 const images = {
-  logo: require('../assets/monocle_logo.svg'),
+  monocleLogo: require('../assets/monocle_logo.svg'),
   textLogo: require('../assets/monocle_type_logo.svg'),
-  redux: require('../assets/redux.png'),
+  reactLogo: require('../assets/react_logo.svg'),
+  reduxLogo: require('../assets/redux.png'),
   monocleApp: require('../assets/monocle_app.png'),
   devApp: require('../assets/developer_app.png'),
+  treeHierarchy: require('../assets/tree_hierarchy.svg'),
+  treeHierarchyUpdated: require('../assets/tree_hierarchy_pt2.svg'),
+  recipeDirectory: require('../assets/recipe_directory.png'),
+  recipeApp: require('../assets/recipe_app.png'),
 };
 
 const theme = createTheme({
@@ -72,30 +77,35 @@ export default class Presentation extends React.Component {
               made for <span style={{color: '#61DAFB'}}>ReactJS</span>
             </Heading>
             <Text textColor="black" textSize="24">created by: michael-bryant choa, jenna davis, and jerry mao</Text>
-            <Image src={images.logo} margin="10px auto 0px" height="300px"/>
+          </Slide>
+          <Slide transition="fade">
+            <Image width="25%" height="25%" src={images.reactLogo} />
+            <br />
+            <br />
+            <div style={{float: 'left', width: '300px', height: '300px'}}>
+              <Appear>
+                <Image width="100%" height="100%" src={images.treeHierarchy} />
+              </Appear>
+            </div>
+            <div style={{float: 'right', width: '300px', height: '300px'}}>
+              <Appear>
+                <Image width="100%" height="100%" src={images.treeHierarchyUpdated} />
+              </Appear>
+            </div>
           </Slide>
           <Slide>
-            <Heading caps>
-              Problem
-            </Heading>
-            <List>
-              <ListItem>React <span style={{color: 'white'}}>data flow</span> through component hierarchies can be difficult to visualize</ListItem>
-              <ListItem><span style={{color: 'white'}}>State changes</span> are difficult to track through deeply nested application structures</ListItem>
-            </List>
+            <div style={{float: 'left'}}>
+              <Image src={images.recipeDirectory} />
+            </div>
+            <div style={{float: 'right'}}>
+              <Image width="60%" src={images.recipeApp} />
+            </div>
           </Slide>
           <Slide transition="fade">
               <Image src={images.textLogo} margin="10px auto 20px" height="300px"/>
-            <Appear>
-              <Text textColor="white">
-              A developer tool that visually displays <span style={{color: '#61DAFB'}}>React component hierarchy</span> along with key component information.
-              </Text>
-            </Appear>
           </Slide>
           <Slide>
-            <Heading>GIF</Heading>
-          </Slide>
-          <Slide>
-            <IFrame width={window.innerWidth - 40} height={window.innerHeight + 80} src="/app" />
+            <Heading>DEMO</Heading>
           </Slide>
           <Slide>
             <Heading caps>
@@ -129,7 +139,7 @@ export default class Presentation extends React.Component {
               <Image src={images.monocleApp} width="40%" height="40%" />
               <Appear>
                 <div>
-                  <Image src={images.redux} width="30%" height="30%"/>
+                  <Image src={images.reduxLogo} width="30%" height="30%"/>
                   <br />
                   <Image 
                     width="35%"
