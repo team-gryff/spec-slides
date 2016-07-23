@@ -48,8 +48,7 @@ const images = {
   reduxLogo: require('../assets/redux.png'),
   monocleApp: require('../assets/monocle_app.png'),
   devApp: require('../assets/developer_app.png'),
-  treeHierarchy: require('../assets/tree_hierarchy.svg'),
-  treeHierarchyUpdated: require('../assets/tree_hierarchy_pt2.svg'),
+  unidirectional: require('../assets/unidirectional.svg'),
   recipeDirectory: require('../assets/recipe_directory.png'),
   recipeApp: require('../assets/recipe_app.png'),
 };
@@ -81,13 +80,7 @@ export default class Presentation extends React.Component {
           <Slide transition="fade">
             <Image width="25%" height="25%" src={images.reactLogo} />
             <br />
-            <br />
-            <div style={{float: 'left', width: '300px', height: '300px'}}>
-                <Image width="100%" height="100%" src={images.treeHierarchy} />
-            </div>
-            <div style={{float: 'right', width: '300px', height: '300px'}}>
-                <Image width="100%" height="100%" src={images.treeHierarchyUpdated} />
-            </div>
+            <Appear><Image width="50%" height="50%" src={images.unidirectional} /></Appear>
           </Slide>
           <Slide>
             <Heading>Instagram Clone Code Snippets</Heading>
