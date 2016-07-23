@@ -78,9 +78,11 @@ export default class Presentation extends React.Component {
             <Text textColor="black" textSize="24">created by: michael-bryant choa, jenna davis, and jerry mao</Text>
           </Slide>
           <Slide transition="fade">
-            <Image width="25%" height="25%" src={images.reactLogo} />
-            <br />
-            <Appear><Image width="50%" height="50%" src={images.unidirectional} /></Appear>
+            <Image width="40%" height="40%" src={images.reactLogo} />
+          </Slide>
+          <Slide transition="fade">
+            <Image width="60%" height="60%" src={images.unidirectional} />
+            <Text textColor="white">Unidirectional Data Flow</Text>
           </Slide>
           <Slide>
             <Heading>Instagram Clone Code Snippets</Heading>
