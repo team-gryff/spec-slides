@@ -83,23 +83,14 @@ export default class Presentation extends React.Component {
             <br />
             <br />
             <div style={{float: 'left', width: '300px', height: '300px'}}>
-              <Appear>
                 <Image width="100%" height="100%" src={images.treeHierarchy} />
-              </Appear>
             </div>
             <div style={{float: 'right', width: '300px', height: '300px'}}>
-              <Appear>
                 <Image width="100%" height="100%" src={images.treeHierarchyUpdated} />
-              </Appear>
             </div>
           </Slide>
           <Slide>
-            <div style={{float: 'left'}}>
-              <Image src={images.recipeDirectory} />
-            </div>
-            <div style={{float: 'right'}}>
-              <Image width="60%" src={images.recipeApp} />
-            </div>
+            <Heading>Instagram Clone Code Snippets</Heading>
           </Slide>
           <Slide transition="fade">
               <Image src={images.textLogo} margin="10px auto 20px" height="300px"/>
@@ -108,32 +99,8 @@ export default class Presentation extends React.Component {
             <Heading>DEMO</Heading>
           </Slide>
           <Slide>
-            <Heading caps>
-              Parsing
-            </Heading>
-            <Layout>
-              <Appear>
-              <Fill><CodePane
-              lang="jsx"
-              source={require("raw!../assets/deck.example")}
-              margin="20px auto"
-            />
-            </Fill></Appear>
-            <Appear><Fill>
-              <CodePane
-              lang="jsx"
-              source={require("raw!../assets/ast.example")}
-              margin="20px auto"
-            />
-            </Fill></Appear>
-            <Appear><Fill>
-              <CodePane
-              lang="jsx"
-              source={require("raw!../assets/formatted.example")}
-              margin="20px auto"
-            />
-            </Fill></Appear>
-          </Layout></Slide>
+            <Heading>State Sync Slide 1</Heading>
+          </Slide>
           <Slide>
             <Layout>
               <Image src={images.monocleApp} width="40%" height="40%" />
