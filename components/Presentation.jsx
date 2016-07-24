@@ -46,11 +46,21 @@ const images = {
   textLogo: require('../assets/monocle_type_logo.svg'),
   reactLogo: require('../assets/react_logo.svg'),
   reduxLogo: require('../assets/redux.png'),
+  npmLogo: require('../assets/npm-logo.svg'),
+  ghLogo: require('../assets/github-logo.png'),
   monocleApp: require('../assets/monocle_app.png'),
   devApp: require('../assets/developer_app.png'),
   unidirectional: require('../assets/unidirectional.svg'),
   recipeDirectory: require('../assets/recipe_directory.png'),
   recipeApp: require('../assets/recipe_app.png'),
+  instagramSnippets: {
+    instagramApp: require('../assets/problem/InstagramApp.png'),
+    commentBox: require('../assets/problem/CommentBox.png'),
+    commentContainer: require('../assets/problem/CommentContainer.png'),
+    post: require('../assets/problem/Post.png'),
+    postContainer: require('../assets/problem/PostContainer.png'),
+    postHeader: require('../assets/problem/PostHeader.png'),
+  }
 };
 
 const theme = createTheme({
@@ -85,7 +95,12 @@ export default class Presentation extends React.Component {
             <Text textColor="white">Unidirectional Data Flow</Text>
           </Slide>
           <Slide>
-            <Heading>Instagram Clone Code Snippets</Heading>
+            <Image width="50%" style={{ float: 'right' }} src={images.instagramSnippets.instagramApp} />
+            <Appear style={{ position: 'absolute', top: 0, left: -100, border: '1px solid white' }}><Image src={images.instagramSnippets.postContainer} /></Appear>
+            <Appear style={{ position: 'absolute', top: 100, left: 0, border: '1px solid white' }}><Image src={images.instagramSnippets.post} /></Appear>
+            <Appear style={{ position: 'absolute', top: 200, left: 100, border: '1px solid white' }}><Image src={images.instagramSnippets.postHeader} /></Appear>
+            <Appear style={{ position: 'absolute', top: 50, left: -50, border: '1px solid white' }}><Image src={images.instagramSnippets.commentContainer} /></Appear>
+            <Appear style={{ position: 'absolute', top: 150, left: 50, border: '1px solid white' }}><Image src={images.instagramSnippets.commentBox} /></Appear>
           </Slide>
           <Slide transition="fade">
               <Image src={images.textLogo} margin="10px auto 20px" height="300px"/>
@@ -97,26 +112,13 @@ export default class Presentation extends React.Component {
             <Heading>State Sync Slide 1</Heading>
           </Slide>
           <Slide>
-            <Layout>
-              <Image src={images.monocleApp} width="40%" height="40%" />
-              <Appear>
-                <div>
-                  <Image src={images.reduxLogo} width="30%" height="30%"/>
-                  <br />
-                  <Image 
-                    width="35%"
-                    height="10%"
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Arrow_left.svg/2000px-Arrow_left.svg.png" />
-                </div>
-              </Appear>
-              <Fill><Image src={images.devApp} /></Fill>
-            </Layout>
+            <Image src={images.reduxLogo} width="30%" height="30%"/>
           </Slide>
           <Slide>
             <Heading caps>Check Us Out</Heading>
             <div style={{marginTop: 50}} >
               <div style={{display: 'flex', marginLeft: 200}}>
-                <Image margin="5" padding="0" src="http://newmerator.github.io/blacktocat.png" width="8%" height="8%" />
+                <Image margin="5" padding="0" src={images.ghLogo} width="8%" height="8%" />
                 <Text 
                   margin="10"
                   textColor="white" 
@@ -127,7 +129,7 @@ export default class Presentation extends React.Component {
                 </Text>
               </div>  
               <div style={{display: 'flex', marginLeft: 200}}>
-                <Image margin="8" padding="0" src="https://www.npmjs.com/static/images/npm-logo.svg" width="10%" height="10%"/>
+                <Image margin="8" padding="0" src={images.npmLogo} width="10%" height="10%"/>
                 <Text 
                   margin="10"
                   textColor="white" 
@@ -143,39 +145,3 @@ export default class Presentation extends React.Component {
     );
   }
 }
-
-              // <Appear><ListItem>Tree and developer's app are concurently mounted</ListItem></Appear>
-              // <Appear><ListItem>Bundle file is injected with wrapper function</ListItem></Appear>
-              // <Appear><ListItem>States between tree and developer's app are linked using Redux</ListItem></Appear>
-              // <Appear><ListItem>Wrapper function dispatchs information to Redux Store</ListItem></Appear>
-              // <Appear><ListItem>Once state is update both tree and app are rerendered</ListItem></Appear>
-
-          // <Slide transition={["zoom", "fade"]} bgColor="primary">
-          //   <Layout>
-          //   <Appear>
-          //     <Fill>
-          //       <Text textColor="white" textSize="37">React Source Code</Text>
-          //       <Image width="60%" height="60%" src="http://www.clker.com/cliparts/i/d/j/L/0/G/file-icon-md.png" />
-          //     </Fill>
-          //   </Appear>
-          //   <Appear>
-          //     <Image width="15%" height="15%" src="http://www.clker.com/cliparts/7/3/4/6/11949868861576570036arrow02_1.svg" />
-          //   </Appear>
-          //   <Appear>
-          //     <Fill>
-          //       <Text textColor="white" textSize="37">React AST Parser</Text>
-          //       <Image width="50%" src="https://cdn.auth0.com/blog/react-js/react.png" />
-          //     </Fill>
-          //   </Appear>
-          //   <Appear>
-          //     <Image width="15%" height="15%" src="http://www.clker.com/cliparts/7/3/4/6/11949868861576570036arrow02_1.svg" />
-          //   </Appear>
-          //   <Appear>
-          //     <Fill>
-          //       <Text textColor="white" textSize="37">React + D3 Renderer</Text>
-          //       <Image width="50%" height="50%" src="https://cdn.auth0.com/blog/react-js/react.png" />
-          //       <Image width="50%" height="50%" src="https://d1xwtr0qwr70yv.cloudfront.net/assets/tech/d3-7732c6dfe97d8fdb11a2cf9312b8b088.svg" />
-          //     </Fill>
-          //   </Appear>
-          // </Layout>
-          // </Slide>
