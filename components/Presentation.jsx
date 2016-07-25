@@ -61,6 +61,8 @@ const images = {
   monocleFile: require('../assets/monocle_file.svg'),
   arrow: require('../assets/arrow.svg'),
   wrapperSnippet: require('../assets/wrapper_snippet.svg'),
+  stateSyncBefore: require('../assets/statesync_before.png'),
+  stateSyncAfter: require('../assets/statesync_after.png')
 };
 
 const theme = createTheme({
@@ -113,6 +115,8 @@ export default class Presentation extends React.Component {
           <Slide transition="fade">
             <Image style={{ position: 'absolute', top: -100, left: 50 }} width="25%" src={images.monocleFile} />
             <Image style={{ position: 'absolute', top: -350, left: 100 }} src={images.wrapperSnippet} width="100%" />
+            <Image style={{ position: 'absolute', top: -250, left: 582, border: '1px solid grey' }} width="40%" src={ images.stateSyncBefore } />
+            <Image style={{ position: 'absolute', top: 110, left: 582, border: '1px solid grey' }} width="40%" src={ images.stateSyncAfter } />
           </Slide>
           <Slide>
             <Image style={{ position: 'absolute', top: -100, left: 50 }} width="25%" src={images.monocleFile} />
