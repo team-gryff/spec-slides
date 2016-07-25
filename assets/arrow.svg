@@ -1,0 +1,19 @@
+<svg width="456" height="206" viewBox="0 0 456 206" version="2.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
+<title>arrow</title>
+<desc>Created using Figma 0.90</desc>
+<g id="Canvas" transform="translate(-1226 34)" figma:type="canvas">
+<mask id="mask0_outline" mask-type="alpha">
+<path d="M 1226 -34L 1682 -34L 1682 172L 1226 172L 1226 -34Z" fill="#FFFFFF"/>
+</mask>
+<g id="arrow" style="mix-blend-mode:normal;" mask="url(#mask0_outline)" figma:type="frame">
+<g id="Vector" style="mix-blend-mode:normal;" figma:type="vector">
+<use xlink:href="#path0_fill" transform="matrix(1 0 0 1 1226 -34)" fill="#56CCF2" style="mix-blend-mode:normal;"/>
+<use xlink:href="#path1_stroke" transform="matrix(1 0 0 1 1226 -34)" fill="#333333" style="mix-blend-mode:normal;"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 0 66.5L 355 66.5L 355 0L 456 101L 355 202L 355 136.5L 0 136.5L 0 66.5Z"/>
+<path id="path1_stroke" d="M 0 66.5L 0 66L -0.5 66L -0.5 66.5L 0 66.5ZM 355 66.5L 355 67L 355.5 67L 355.5 66.5L 355 66.5ZM 355 0L 355.354 -0.353553L 354.5 -1.20711L 354.5 0L 355 0ZM 456 101L 456.354 101.354L 456.707 101L 456.354 100.646L 456 101ZM 355 202L 354.5 202L 354.5 203.207L 355.354 202.354L 355 202ZM 355 136.5L 355.5 136.5L 355.5 136L 355 136L 355 136.5ZM 0 136.5L -0.5 136.5L -0.5 137L 0 137L 0 136.5ZM 0 67L 355 67L 355 66L 0 66L 0 67ZM 355.5 66.5L 355.5 0L 354.5 0L 354.5 66.5L 355.5 66.5ZM 354.646 0.353553L 455.646 101.354L 456.354 100.646L 355.354 -0.353553L 354.646 0.353553ZM 455.646 100.646L 354.646 201.646L 355.354 202.354L 456.354 101.354L 455.646 100.646ZM 355.5 202L 355.5 136.5L 354.5 136.5L 354.5 202L 355.5 202ZM 355 136L 0 136L 0 137L 355 137L 355 136ZM 0.5 136.5L 0.5 66.5L -0.5 66.5L -0.5 136.5L 0.5 136.5Z"/>
+</defs>
+</svg>

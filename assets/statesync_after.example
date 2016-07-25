@@ -1,3 +1,5 @@
 handleClickEvent(e) {
-  wrapper('SearchBar', this)({ searchInput: '', highlight: true });
+  wrapper('SearchBar', this)({ 
+    searchInput: '', highlight: true 
+  });
 }

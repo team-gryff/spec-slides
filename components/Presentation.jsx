@@ -49,10 +49,7 @@ const images = {
   npmLogo: require('../assets/npm-logo.svg'),
   ghLogo: require('../assets/github-logo.png'),
   monocleApp: require('../assets/monocle_app.png'),
-  devApp: require('../assets/developer_app.png'),
   unidirectional: require('../assets/unidirectional.svg'),
-  recipeDirectory: require('../assets/recipe_directory.png'),
-  recipeApp: require('../assets/recipe_app.png'),
   instagramSnippets: {
     instagramApp: require('../assets/problem/InstagramApp.png'),
     commentBox: require('../assets/problem/CommentBox.png'),
@@ -60,7 +57,10 @@ const images = {
     post: require('../assets/problem/Post.png'),
     postContainer: require('../assets/problem/PostContainer.png'),
     postHeader: require('../assets/problem/PostHeader.png'),
-  }
+  },
+  monocleFile: require('../assets/monocle_file.svg'),
+  arrow: require('../assets/arrow.svg'),
+  wrapperSnippet: require('../assets/wrapper_snippet.svg'),
 };
 
 const theme = createTheme({
@@ -94,7 +94,7 @@ export default class Presentation extends React.Component {
             <Image width="60%" height="60%" src={images.unidirectional} />
             <Text textColor="white">Unidirectional Data Flow</Text>
           </Slide>
-          <Slide>
+          <Slide transition="fade">
             <Image width="50%" style={{ float: 'right' }} src={images.instagramSnippets.instagramApp} />
             <Appear style={{ position: 'absolute', top: 0, left: -100, border: '1px solid white' }}><Image src={images.instagramSnippets.postContainer} /></Appear>
             <Appear style={{ position: 'absolute', top: 100, left: 0, border: '1px solid white' }}><Image src={images.instagramSnippets.post} /></Appear>
@@ -109,10 +109,20 @@ export default class Presentation extends React.Component {
             <Heading>DEMO</Heading>
           </Slide>
           <Slide>
-            <Heading>State Sync Slide 1</Heading>
+            <Image style={{ position: 'absolute', top: -100, left: 50 }} width="25%" src={images.monocleFile} />
+            <Image style={{ position: 'absolute', top: 0, left: 400 }} src={ images.arrow } width="25%" />
+            <Image style={{ position: 'absolute', top: -75, left: 700 }} width="30%" src={images.monocleLogo} />
+          </Slide>
+          <Slide transition="fade">
+            <Image style={{ position: 'absolute', top: -100, left: 50 }} width="25%" src={images.monocleFile} />
+            <Image style={{ position: 'absolute', top: -350, left: 100 }} src={images.wrapperSnippet} width="100%" />
           </Slide>
           <Slide>
-            <Image src={images.reduxLogo} width="30%" height="30%"/>
+            <Image style={{ position: 'absolute', top: -100, left: 50 }} width="25%" src={images.monocleFile} />
+            <Image style={{ position: 'absolute', top: -75, left: 700 }} width="30%" src={images.monocleLogo} />
+            <Appear style={{ position: 'absolute', top: -50, left: 400 }}>
+                <Image src={ images.reduxLogo } width="20%" />
+            </Appear>
           </Slide>
           <Slide>
             <Heading caps>Check Us Out</Heading>

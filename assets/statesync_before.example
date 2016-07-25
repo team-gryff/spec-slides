@@ -1,3 +1,5 @@
 handleClickEvent(e) {
-  this.setState({ searchInput: '', highlight: true });
+  this.setState({ 
+    searchInput: '', highlight: true
+  });
 }
