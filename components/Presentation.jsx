@@ -49,6 +49,7 @@ const images = {
   npmLogo: require('../assets/npm-logo.svg'),
   ghLogo: require('../assets/github-logo.png'),
   monocleApp: require('../assets/monocle_app.png'),
+  componentsFinal: require('../assets/components_final.svg'),
   unidirectional: require('../assets/unidirectional.svg'),
   instagramSnippets: {
     instagramApp: require('../assets/problem/InstagramApp.png'),
@@ -61,6 +62,8 @@ const images = {
   monocleFile: require('../assets/monocle_file.svg'),
   arrow: require('../assets/arrow.svg'),
   wrapperSnippet: require('../assets/wrapper_snippet.svg'),
+  stateSyncBefore: require('../assets/statesync_before.png'),
+  stateSyncAfter: require('../assets/statesync_after.png')
 };
 
 const theme = createTheme({
@@ -91,8 +94,10 @@ export default class Presentation extends React.Component {
             <Image width="40%" height="40%" src={images.reactLogo} />
           </Slide>
           <Slide transition="fade">
-            <Image width="60%" height="60%" src={images.unidirectional} />
-            <Text textColor="white">Unidirectional Data Flow</Text>
+            <Image style={{ position: 'absolute', top: -100, left: 0 }} width="40%" src={images.componentsFinal} />
+            <Image style={{ position: 'absolute', top: -150, left: 500 }} width="50%" src={images.unidirectional} />
+            <Text textColor="white" style={{ position: 'absolute', top: 240, left: 20 }}>Components-Based</Text>
+            <Text textColor="white" style={{ position: 'absolute', top: 240, left: 550 }}>Unidirection Data Flow</Text>
           </Slide>
           <Slide transition="fade">
             <Image width="50%" style={{ float: 'right' }} src={images.instagramSnippets.instagramApp} />
@@ -113,6 +118,8 @@ export default class Presentation extends React.Component {
           <Slide transition="fade">
             <Image style={{ position: 'absolute', top: -100, left: 50 }} width="25%" src={images.monocleFile} />
             <Image style={{ position: 'absolute', top: -350, left: 100 }} src={images.wrapperSnippet} width="100%" />
+            <Image style={{ position: 'absolute', top: -250, left: 582, border: '1px solid grey' }} width="40%" src={ images.stateSyncBefore } />
+            <Image style={{ position: 'absolute', top: 110, left: 582, border: '1px solid grey' }} width="40%" src={ images.stateSyncAfter } />
           </Slide>
           <Slide>
             <Image style={{ position: 'absolute', top: -100, left: 50 }} width="25%" src={images.monocleFile} />
