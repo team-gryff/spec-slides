@@ -128,8 +128,10 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide>
             <Image style={{ position: 'absolute', top: -100, left: 50 }} width="25%" src={images.monocleFile} />
+            <Text textColor="white" style={{ position: 'absolute', top: 200 }}>Developer App</Text>
             <Image style={{ position: 'absolute', top: 0, left: 400 }} src={ images.arrow } width="25%" />
             <Image style={{ position: 'absolute', top: -75, left: 700 }} width="30%" src={images.monocleLogo} />
+            <Text textColor="white" style={{ position: 'absolute', top: 200, left: 725 }}>Monocle App</Text>
           </Slide>
           <Slide transition="fade">
             <Image style={{ position: 'absolute', top: -100, left: 50 }} width="25%" src={images.monocleFile} />
