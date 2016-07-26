@@ -99,13 +99,15 @@ export default class Presentation extends React.Component {
             <Text textColor="black" textSize="24">created by: michael-bryant choa, jenna davis, and jerry mao</Text>
           </Slide>
           <Slide transition="fade">
-            <Image width="40%" height="40%" src={images.reactLogo} />
-          </Slide>
-          <Slide transition="fade">
-            <Image style={{ position: 'absolute', top: -100, left: 0 }} width="40%" src={images.componentsFinal} />
-            <Image style={{ position: 'absolute', top: -150, left: 500 }} width="50%" src={images.unidirectional} />
-            <Text textColor="white" style={{ position: 'absolute', top: 240, left: 20 }}>Components-Based</Text>
-            <Text textColor="white" style={{ position: 'absolute', top: 240, left: 550 }}>Unidirectional Data Flow</Text>
+            <Image style={{ position: 'absolute', top: -300, left: 375 }} width="25%" src={images.reactLogo} />
+            <Appear>
+              <div>
+                <Image style={{ position: 'absolute', top: -75, left: 25 }} width="35%" src={images.componentsFinal} />
+                <Text textColor="white" style={{ position: 'absolute', top: 240, left: 20 }}>Components-Based</Text>
+                <Image style={{ position: 'absolute', top: -115, left: 550 }} width="45%" src={images.unidirectional} />
+                <Text textColor="white" style={{ position: 'absolute', top: 240, left: 550 }}>Unidirectional Data Flow</Text>
+              </div>
+            </Appear>
           </Slide>
           <Slide transition="fade">
             <Image width="50%" style={{ float: 'right' }} src={images.instagramSnippets.instagramApp} />
@@ -136,10 +138,10 @@ export default class Presentation extends React.Component {
             <Image style={{ position: 'absolute', top: 110, left: 582, border: '1px solid grey' }} width="40%" src={ images.stateSyncAfter } />
           </Slide>
           <Slide>
-            <Image style={{ position: 'absolute', top: -100, left: 50 }} width="25%" src={images.monocleFile} />
-            <Image style={{ position: 'absolute', top: -75, left: 700 }} width="30%" src={images.monocleLogo} />
-            <Appear style={{ position: 'absolute', top: -50, left: 400 }}>
-                <Image src={ images.reduxLogo } width="20%" />
+            <Image style={{ position: 'absolute', top: -20, left: 50 }} width="25%" src={images.monocleFile} />
+            <Image style={{ position: 'absolute', top: 15, left: 700 }} width="30%" src={images.monocleLogo} />
+            <Appear>
+                <Image style={{ position: 'absolute', top: -50, left: 410 }} src={ images.reduxLogo } width="20%" />
             </Appear>
           </Slide>
           <Slide>
