@@ -59,6 +59,13 @@ const images = {
     postContainer: require('../assets/problem/PostContainer.png'),
     postHeader: require('../assets/problem/PostHeader.png'),
   },
+  instagramBoxes: {
+    one: require('../assets/ig_1.svg'),
+    two: require('../assets/ig_2.svg'),
+    three: require('../assets/ig_3.svg'),
+    four: require('../assets/ig_4.svg'),
+    five: require('../assets/ig_5.svg'),
+  },
   monocleFile: require('../assets/monocle_file.svg'),
   arrow: require('../assets/arrow.svg'),
   wrapperSnippet: require('../assets/wrapper_snippet.svg'),
@@ -72,6 +79,7 @@ const theme = createTheme({
 {
   primary: 'Roboto'
 });
+            // <Appear style={{ position: 'absolute', top: 150, left: 480,}}><Image width= "50%" height="1000px" src={images.instagramBoxes.one} /></Appear>
 
 export default class Presentation extends React.Component {
   render() {
@@ -101,11 +109,17 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide transition="fade">
             <Image width="50%" style={{ float: 'right' }} src={images.instagramSnippets.instagramApp} />
-            <Appear style={{ position: 'absolute', top: 0, left: -100, border: '1px solid white' }}><Image src={images.instagramSnippets.postContainer} /></Appear>
-            <Appear style={{ position: 'absolute', top: 100, left: 0, border: '1px solid white' }}><Image src={images.instagramSnippets.post} /></Appear>
-            <Appear style={{ position: 'absolute', top: 200, left: 100, border: '1px solid white' }}><Image src={images.instagramSnippets.postHeader} /></Appear>
-            <Appear style={{ position: 'absolute', top: 50, left: -50, border: '1px solid white' }}><Image src={images.instagramSnippets.commentContainer} /></Appear>
-            <Appear style={{ position: 'absolute', top: 150, left: 50, border: '1px solid white' }}><Image src={images.instagramSnippets.commentBox} /></Appear>
+            
+            <Appear style={{ position: 'absolute', top: 0, left: -100, border: '5px solid #0DEC10' }}><Image src={images.instagramSnippets.postContainer} /></Appear>
+            <Appear style={{ position: 'absolute', top: 40, left: 492}}><Image width="47.5%" src={images.instagramBoxes.two} /></Appear>
+            <Appear style={{ position: 'absolute', top: 100, left: 0, border: '5px solid #EB5757' }}><Image src={images.instagramSnippets.post} /></Appear>
+            <Appear style={{ position: 'absolute', top: 110, left: 527}}><Image width="40%" src={images.instagramBoxes.one} /></Appear>
+            <Appear style={{ position: 'absolute', top: 200, left: 100, border: '5px solid #ECED2B' }}><Image src={images.instagramSnippets.postHeader} /></Appear>
+            <Appear style={{ position: 'absolute', top: 115, left: 505}}><Image width="45.5%" src={images.instagramBoxes.three} /></Appear>
+            <Appear style={{ position: 'absolute', top: 50, left: -50, border: '5px solid #2F80ED' }}><Image src={images.instagramSnippets.commentContainer} /></Appear>
+            <Appear style={{ position: 'absolute', top: 452, left: 507}}><Image width="43.5%" src={images.instagramBoxes.four} /></Appear>
+            <Appear style={{ position: 'absolute', top: 150, left: 50, border: '5px solid #BB6BD9' }}><Image src={images.instagramSnippets.commentBox} /></Appear>
+            <Appear style={{ position: 'absolute', top: 590, left: 525}}><Image width="40.5%" src={images.instagramBoxes.five} /></Appear>
           </Slide>
           <Slide transition="fade">
               <Image src={images.textLogo} margin="10px auto 20px" height="300px"/>

@@ -1,0 +1,18 @@
+<svg width="379" height="170" viewBox="0 0 379 170" version="2.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
+<title>Rectangle 7</title>
+<desc>Created using Figma 0.90</desc>
+<g id="Canvas" transform="translate(211 -1509)" figma:type="canvas">
+<g id="Rectangle 7" style="mix-blend-mode:normal;" figma:type="rounded-rectangle">
+<mask id="mask0_outline_ins">
+<use xlink:href="#path0_fill" fill="white" transform="matrix(1 0 0 1 -212 1509)"/>
+</mask>
+<g mask="url(#mask0_outline_ins)">
+<use xlink:href="#path1_stroke_2x" transform="matrix(1 0 0 1 -212 1509)" fill="#2F80ED" style="mix-blend-mode:normal;"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 0 0L 380 0L 380 170L 0 170L 0 0Z"/>
+<path id="path1_stroke_2x" d="M 0 0L 0 -5L -5 -5L -5 0L 0 0ZM 380 0L 385 0L 385 -5L 380 -5L 380 0ZM 380 170L 380 175L 385 175L 385 170L 380 170ZM 0 170L -5 170L -5 175L 0 175L 0 170ZM 0 5L 380 5L 380 -5L 0 -5L 0 5ZM 375 0L 375 170L 385 170L 385 0L 375 0ZM 380 165L 0 165L 0 175L 380 175L 380 165ZM 5 170L 5 0L -5 0L -5 170L 5 170Z"/>
+</defs>
+</svg>
