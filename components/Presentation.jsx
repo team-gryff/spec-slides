@@ -91,7 +91,7 @@ export default class Presentation extends React.Component {
             react monocle
             </Heading>
             <Text size={1} fit textColor ="black">
-              a hierarchical repesentation of your code
+              a hierarchical representation of your code
             </Text>
             <Heading size={2} caps textColor="white" textSize={50}>
               made for <span style={{color: '#61DAFB'}}>ReactJS</span>
