@@ -102,10 +102,10 @@ export default class Presentation extends React.Component {
             <Image style={{ position: 'absolute', top: -300, left: 375 }} width="25%" src={images.reactLogo} />
             <Appear>
               <div>
-                <Image style={{ position: 'absolute', top: -75, left: 25 }} width="35%" src={images.componentsFinal} />
-                <Text textColor="white" style={{ position: 'absolute', top: 240, left: 20 }}>Components-Based</Text>
-                <Image style={{ position: 'absolute', top: -115, left: 550 }} width="45%" src={images.unidirectional} />
-                <Text textColor="white" style={{ position: 'absolute', top: 240, left: 550 }}>Unidirectional Data Flow</Text>
+                <Image style={{ position: 'absolute', top: -50, left: 25 }} width="35%" src={images.componentsFinal} />
+                <Text textColor="white" style={{ position: 'absolute', top: 265, left: 20 }}>Components-Based</Text>
+                <Image style={{ position: 'absolute', top: -90, left: 550 }} width="45%" src={images.unidirectional} />
+                <Text textColor="white" style={{ position: 'absolute', top: 265, left: 550 }}>Unidirectional Data Flow</Text>
               </div>
             </Appear>
           </Slide>
