@@ -131,19 +131,25 @@ export default class Presentation extends React.Component {
             <Text textColor="white" style={{ position: 'absolute', top: 200 }}>Developer App</Text>
             <Image style={{ position: 'absolute', top: 0, left: 400 }} src={ images.arrow } width="25%" />
             <Image style={{ position: 'absolute', top: -75, left: 700 }} width="30%" src={images.monocleLogo} />
-            <Text textColor="white" style={{ position: 'absolute', top: 200, left: 725 }}>Monocle App</Text>
+            <Text textColor="white" style={{ position: 'absolute', top: 200, left: 750 }}>Monocle</Text>
           </Slide>
           <Slide transition="fade">
             <Image style={{ position: 'absolute', top: -100, left: 50 }} width="25%" src={images.monocleFile} />
+            <Text textColor="white" style={{ position: 'absolute', top: 200 }}>Developer App</Text>
             <Image style={{ position: 'absolute', top: -350, left: 100 }} src={images.wrapperSnippet} width="100%" />
             <Image style={{ position: 'absolute', top: -250, left: 582, border: '1px solid grey' }} width="40%" src={ images.stateSyncBefore } />
             <Image style={{ position: 'absolute', top: 110, left: 582, border: '1px solid grey' }} width="40%" src={ images.stateSyncAfter } />
           </Slide>
           <Slide>
-            <Image style={{ position: 'absolute', top: -20, left: 50 }} width="25%" src={images.monocleFile} />
-            <Image style={{ position: 'absolute', top: 15, left: 700 }} width="30%" src={images.monocleLogo} />
+            <Image style={{ position: 'absolute', top: -110, left: 50 }} width="25%" src={images.monocleFile} />
+            <Text textColor="white" style={{ position: 'absolute', top: 200 }}>Developer App</Text>
+            <Image style={{ position: 'absolute', top: -75, left: 700 }} width="30%" src={images.monocleLogo} />
+            <Text textColor="white" style={{ position: 'absolute', top: 200, left: 750 }}>Monocle</Text>
             <Appear>
-                <Image style={{ position: 'absolute', top: -50, left: 410 }} src={ images.reduxLogo } width="20%" />
+              <div>
+                <Image style={{ position: 'absolute', top: -50, left: 420 }} src={ images.reduxLogo } width="20%" />
+                <Text textColor="#7949b8" style={{ position: 'absolute', top: 200, left: 475 }}>Redux</Text>
+              </div>
             </Appear>
           </Slide>
           <Slide>
