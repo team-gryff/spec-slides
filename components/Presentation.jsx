@@ -147,26 +147,11 @@ export default class Presentation extends React.Component {
             <Appear style={{ position: 'absolute', top: 150, left: 50, border: '5px solid #BB6BD9' }}><Image src={images.instagramSnippets.commentBox} /></Appear>
             <Appear style={{ position: 'absolute', top: 590, left: 525}}><Image width="40.5%" src={images.instagramBoxes.five} /></Appear>
           </Slide>
+          <Slide>
+            <Heading>High-Level Overview</Heading>
+          </Slide>
           <Slide transition="fade">
               <Image src={images.textLogo} margin="10px auto 20px" height="300px"/>
-          </Slide>
-          <Slide transition={['fade']}>
-            <Heading textSize={50}>node positioning (d3)</Heading>
-            <D3React>
-              <DottedNode />
-            </D3React>
-          </Slide>
-          <Slide transition={['fade']}>
-            <Heading textSize={50}>node rendering (react)</Heading>
-            <D3React>
-              <FilledNode />
-            </D3React>
-          </Slide>
-          <Slide transition={['fade']}>
-            <Heading textSize={50}>link rendering (d3)</Heading>
-            <D3React links>
-              <FilledNode />
-            </D3React>
           </Slide>
           <CodeSlide
             transition={['fade']}
@@ -193,9 +178,6 @@ export default class Presentation extends React.Component {
             ]}
           />
           <Slide>
-            <Heading>High-Level Overview</Heading>
-          </Slide>
-          <Slide>
             <Image style={{ position: 'absolute', top: -100, left: 50 }} width="25%" src={images.monocleFile} />
             <Text textColor="white" style={{ position: 'absolute', top: 200 }}>Developer App</Text>
             <Image style={{ position: 'absolute', top: 0, left: 400 }} src={ images.arrow } width="25%" />
@@ -220,6 +202,24 @@ export default class Presentation extends React.Component {
                 <Text textColor="#7949b8" style={{ position: 'absolute', top: 200, left: 475 }}>Redux</Text>
               </div>
             </Appear>
+          </Slide>
+          <Slide transition={['fade']}>
+            <Heading textSize={50}>node positioning (d3)</Heading>
+            <D3React>
+              <DottedNode />
+            </D3React>
+          </Slide>
+          <Slide transition={['fade']}>
+            <Heading textSize={50}>node rendering (react)</Heading>
+            <D3React>
+              <FilledNode />
+            </D3React>
+          </Slide>
+          <Slide transition={['fade']}>
+            <Heading textSize={50}>link rendering (d3)</Heading>
+            <D3React links>
+              <FilledNode />
+            </D3React>
           </Slide>
           <Slide>
             <Heading caps>Check Us Out</Heading>
