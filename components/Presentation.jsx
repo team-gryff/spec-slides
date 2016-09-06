@@ -21,7 +21,8 @@ import {
   Quote,
   Slide,
   Spectacle,
-  Text
+  Text,
+  S
 } from "spectacle";
 
 // Import image preloader util
@@ -36,6 +37,9 @@ import Interactive from "../assets/interactive";
 import StateSync from './components/StateSync.jsx';
 import gameTree from './gameTree';
 import IFrame from './components/IFrame.jsx';
+
+import HelloMessage from './components/HelloMessage.jsx';
+import Timer from './components/Timer.jsx';
 
 // Require CSS
 require("normalize.css");
@@ -110,8 +114,29 @@ export default class Presentation extends React.Component {
             </Appear>
           </Slide>
           <Slide transition="fade">
+            <Text textColor="white">Components may have <S type="italic">props</S></Text>
+            <CodePane
+              lang="jsx"
+              source={require("raw!../assets/example/HelloMessage.example")}
+              margin="20px"
+              style={{ minWidth: "500px", maxWidth: "500px" }}
+            />
+            <HelloMessage
+              name="Mike"
+            />
+          </Slide>
+          <Slide transition="fade">
+            <Text textColor="white">Components may have <S type="italic">state</S></Text>
+            <CodePane
+              lang="jsx"
+              source={require("raw!../assets/example/Timer.example")}
+              margin="20px"
+              style={{ minWidth: "600px", maxWidth: "600px" }}
+            />
+            <Timer />
+          </Slide>
+          <Slide transition="fade">
             <Image width="50%" style={{ float: 'right' }} src={images.instagramSnippets.instagramApp} />
-            
             <Appear style={{ position: 'absolute', top: 0, left: -100, border: '5px solid #0DEC10' }}><Image src={images.instagramSnippets.postContainer} /></Appear>
             <Appear style={{ position: 'absolute', top: 40, left: 492}}><Image width="47.5%" src={images.instagramBoxes.two} /></Appear>
             <Appear style={{ position: 'absolute', top: 100, left: 0, border: '5px solid #EB5757' }}><Image src={images.instagramSnippets.post} /></Appear>
@@ -125,6 +150,9 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide transition="fade">
               <Image src={images.textLogo} margin="10px auto 20px" height="300px"/>
+          </Slide>
+          <Slide>
+            <Heading>High-Level Overview</Heading>
           </Slide>
           <Slide>
             <Image style={{ position: 'absolute', top: -100, left: 50 }} width="25%" src={images.monocleFile} />
