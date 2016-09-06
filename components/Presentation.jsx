@@ -32,11 +32,10 @@ import preloader from "spectacle/lib/utils/preloader";
 import createTheme from "spectacle/lib/themes/default";
 
 // Import custom component
-import Interactive from "../assets/interactive";
-// import Graph from './components/Graph.jsx';
-import StateSync from './components/StateSync.jsx';
-import gameTree from './gameTree';
-import IFrame from './components/IFrame.jsx';
+import CodeSlide from 'spectacle-code-slide';
+import D3React from './components/D3React.jsx';
+import DottedNode from './components/DottedNode.jsx';
+import FilledNode from './components/FilledNode.jsx';
 
 import HelloMessage from './components/HelloMessage.jsx';
 import Timer from './components/Timer.jsx';
@@ -151,6 +150,48 @@ export default class Presentation extends React.Component {
           <Slide transition="fade">
               <Image src={images.textLogo} margin="10px auto 20px" height="300px"/>
           </Slide>
+          <Slide transition={['fade']}>
+            <Heading textSize={50}>node positioning (d3)</Heading>
+            <D3React>
+              <DottedNode />
+            </D3React>
+          </Slide>
+          <Slide transition={['fade']}>
+            <Heading textSize={50}>node rendering (react)</Heading>
+            <D3React>
+              <FilledNode />
+            </D3React>
+          </Slide>
+          <Slide transition={['fade']}>
+            <Heading textSize={50}>link rendering (d3)</Heading>
+            <D3React links>
+              <FilledNode />
+            </D3React>
+          </Slide>
+          <CodeSlide
+            transition={['fade']}
+            code={require('raw!../assets/deck.example')}
+            lang="js"
+            ranges={[
+              { loc: [0, 10]},
+            ]}
+          />
+          <CodeSlide
+            transition={['fade']}
+            code={require('raw!../assets/ast.example')}
+            lang="js"
+            ranges={[
+              { loc: [0, 10]},
+            ]}
+          />
+          <CodeSlide
+            transition={['fade']}
+            code={require('raw!../assets/ast.example')}
+            lang="js"
+            ranges={[
+              { loc: [0, 10]},
+            ]}
+          />
           <Slide>
             <Heading>High-Level Overview</Heading>
           </Slide>
