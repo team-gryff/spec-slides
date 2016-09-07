@@ -92,6 +92,12 @@ class D3React extends React.Component {
     }
   }
 
+  componentWillUnmount() {
+    select(document.getElementById('graphz'))
+    .selectAll('path.link').remove();
+  }
+  
+
   render() {
     // const divStyle = {
     //   backgroundColor: "#FAFAFA",

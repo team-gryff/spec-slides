@@ -10,6 +10,11 @@ var Timer = React.createClass({
   componentDidMount: function() {
     this.interval = setInterval(this.tick, 1000);
   },
+
+  componentWillUnmount: function() {
+    clearInterval(this.interval);
+  },
+
   render: function() {
     return (
       <div style={{ color: "white" }}>Seconds Elapsed: {this.state.secondsElapsed}</div>
