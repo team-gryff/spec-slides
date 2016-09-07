@@ -147,18 +147,21 @@ export default class Presentation extends React.Component {
             <Appear style={{ position: 'absolute', top: 150, left: 50, border: '5px solid #BB6BD9' }}><Image src={images.instagramSnippets.commentBox} /></Appear>
             <Appear style={{ position: 'absolute', top: 590, left: 525}}><Image width="40.5%" src={images.instagramBoxes.five} /></Appear>
           </Slide>
-          <Slide>
-            <Heading>High-Level Overview</Heading>
-          </Slide>
           <Slide transition="fade">
               <Image src={images.textLogo} margin="10px auto 20px" height="300px"/>
+          </Slide>
+          <Slide>
+            <Heading>High-Level Overview</Heading>
           </Slide>
           <CodeSlide
             transition={['fade']}
             code={require('raw!../assets/deck.example')}
             lang="js"
             ranges={[
-              { loc: [0, 10]},
+              { loc: [0, 1], title: 'ES2015 React Component'},
+              { loc: [0, 1], title: 'Component Name'},
+              { loc: [10, 15], title: 'Methods' },
+              { loc: [19, 24], title: 'Props and Children' },
             ]}
           />
           <CodeSlide
@@ -166,15 +169,27 @@ export default class Presentation extends React.Component {
             code={require('raw!../assets/ast.example')}
             lang="js"
             ranges={[
-              { loc: [0, 10]},
+              { loc: [0, 1], title: 'Abstract Syntax Tree'},
+              { loc: [5, 15], title: 'Component Name'},
+              { loc: [233, 243], title: 'Methods' },
+              { loc: [519, 525], title: 'Children'},
+              { loc: [395, 405], title: 'Props'},
+              { loc: [440, 450], title: 'More Props'},
+              { loc: [485, 495], title: 'Even More Props'},
             ]}
           />
           <CodeSlide
             transition={['fade']}
-            code={require('raw!../assets/ast.example')}
+            code={require('raw!../assets/formatted.example')}
             lang="js"
             ranges={[
-              { loc: [0, 10]},
+              { loc: [0, 1], title: 'Formatted Object'},
+              { loc: [2, 3], title: 'Component Name'},
+              { loc: [3, 4], title: 'Methods' },
+              { loc: [5, 10], title: 'Children'},
+              { loc: [10, 15], title: 'Props'},
+              { loc: [15, 20], title: 'More Props'},
+              { loc: [20, 25], title: 'Even More Props'},
             ]}
           />
           <Slide>
