@@ -1,1 +1,31 @@
-formatted object will go here :)
+{
+  BigPoppa: {
+    name: 'BigPoppa',
+    methods: ['handleClick'],
+    props: [],
+    children: {
+      {
+        name: 'Notorious',
+        methods: [],
+        props: [
+          {
+            name: 'foo',
+            parent: 'BigPoppa',
+            value: 'state.foo',
+          },
+          {
+            name: 'bar',
+            parent: 'BigPoppa',
+            value: 'state.bar',
+          },
+          {
+            name: 'click',
+            parent: 'BigPoppa',
+            value: 'handleClick'
+          }
+        ],
+        children: [],
+      }
+    }
+  }
+}

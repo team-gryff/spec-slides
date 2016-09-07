@@ -1,224 +1,550 @@
 {
-  "type": "JSXElement",
-  "start": 322,
-  "end": 433,
-  "openingElement": {
-    "type": "JSXOpeningElement",
-    "start": 322,
-    "end": 433,
-    "attributes": [
-      {
-        "type": "JSXAttribute",
-        "start": 342,
-        "end": 362,
-        "name": {
-          "type": "JSXIdentifier",
-          "start": 342,
-          "end": 345,
-          "name": "foo"
-        },
-        "value": {
-          "type": "JSXExpressionContainer",
-          "start": 346,
-          "end": 362,
-          "expression": {
-            "type": "MemberExpression",
-            "start": 347,
-            "end": 361,
-            "object": {
-              "type": "MemberExpression",
-              "start": 347,
-              "end": 357,
-              "object": {
-                "type": "ThisExpression",
-                "start": 347,
-                "end": 351
-              },
-              "property": {
-                "type": "Identifier",
-                "start": 352,
-                "end": 357,
-                "name": "state"
-              },
-              "computed": false
-            },
-            "property": {
-              "type": "Identifier",
-              "start": 358,
-              "end": 361,
-              "name": "foo"
-            },
-            "computed": false
-          }
-        }
-      },
-      {
-        "type": "JSXAttribute",
-        "start": 371,
-        "end": 391,
-        "name": {
-          "type": "JSXIdentifier",
-          "start": 371,
-          "end": 374,
-          "name": "bar"
-        },
-        "value": {
-          "type": "JSXExpressionContainer",
-          "start": 375,
-          "end": 391,
-          "expression": {
-            "type": "MemberExpression",
-            "start": 376,
-            "end": 390,
-            "object": {
-              "type": "MemberExpression",
-              "start": 376,
-              "end": 386,
-              "object": {
-                "type": "ThisExpression",
-                "start": 376,
-                "end": 380
-              },
-              "property": {
-                "type": "Identifier",
-                "start": 381,
-                "end": 386,
-                "name": "state"
-              },
-              "computed": false
-            },
-            "property": {
-              "type": "Identifier",
-              "start": 387,
-              "end": 390,
-              "name": "bar"
-            },
-            "computed": false
-          }
-        }
-      },
-      {
-        "type": "JSXAttribute",
-        "start": 400,
-        "end": 424,
-        "name": {
-          "type": "JSXIdentifier",
-          "start": 400,
-          "end": 405,
-          "name": "click"
-        },
-        "value": {
-          "type": "JSXExpressionContainer",
-          "start": 406,
-          "end": 424,
-          "expression": {
-            "type": "MemberExpression",
-            "start": 407,
-            "end": 423,
-            "object": {
-              "type": "ThisExpression",
-              "start": 407,
-              "end": 411
-            },
-            "property": {
-              "type": "Identifier",
-              "start": 412,
-              "end": 423,
-              "name": "handleClick"
-            },
-            "computed": false
-          }
-        }
-      }
-    ],
-    "name": {
-      "type": "JSXIdentifier",
-      "start": 323,
-      "end": 332,
-      "name": "Notorious"
-    },
-    "selfClosing": true
-  },
-  "closingElement": null,
-  "children": []
+"type": "Program",
+"start": 0,
+"end": 459,
+"body": [
+{
+"type": "ClassDeclaration",
+"start": 0,
+"end": 458,
+"id": {
+"type": "Identifier",
+"start": 6,
+"end": 14,
+"name": "BigPoppa"
+},
+"superClass": {
+"type": "MemberExpression",
+"start": 23,
+"end": 38,
+"object": {
+"type": "Identifier",
+"start": 23,
+"end": 28,
+"name": "React"
+},
+"property": {
+"type": "Identifier",
+"start": 29,
+"end": 38,
+"name": "Component"
+},
+"computed": false
+},
+"body": {
+"type": "ClassBody",
+"start": 39,
+"end": 458,
+"body": [
+{
+"type": "MethodDefinition",
+"start": 43,
+"end": 196,
+"computed": false,
+"key": {
+"type": "Identifier",
+"start": 43,
+"end": 54,
+"name": "constructor"
+},
+"static": false,
+"kind": "constructor",
+"value": {
+"type": "FunctionExpression",
+"start": 54,
+"end": 196,
+"id": null,
+"generator": false,
+"expression": false,
+"params": [],
+"body": {
+"type": "BlockStatement",
+"start": 57,
+"end": 196,
+"body": [
+{
+"type": "ExpressionStatement",
+"start": 63,
+"end": 71,
+"expression": {
+"type": "CallExpression",
+"start": 63,
+"end": 70,
+"callee": {
+"type": "Super",
+"start": 63,
+"end": 68
+},
+"arguments": []
+}
 },
 {
-  "type": "Literal",
-  "start": 433,
-  "end": 440,
-  "value": "\n      ",
-  "raw": "\n      "
+"type": "ExpressionStatement",
+"start": 76,
+"end": 140,
+"expression": {
+"type": "AssignmentExpression",
+"start": 76,
+"end": 140,
+"operator": "=",
+"left": {
+"type": "MemberExpression",
+"start": 76,
+"end": 86,
+"object": {
+"type": "ThisExpression",
+"start": 76,
+"end": 80
+},
+"property": {
+"type": "Identifier",
+"start": 81,
+"end": 86,
+"name": "state"
+},
+"computed": false
+},
+"right": {
+"type": "ObjectExpression",
+"start": 89,
+"end": 140,
+"properties": [
+{
+"type": "Property",
+"start": 97,
+"end": 106,
+"method": false,
+"shorthand": false,
+"computed": false,
+"key": {
+"type": "Identifier",
+"start": 97,
+"end": 100,
+"name": "foo"
+},
+"value": {
+"type": "Literal",
+"start": 102,
+"end": 106,
+"value": true,
+"raw": "true"
+},
+"kind": "init"
 },
 {
-  "type": "JSXElement",
-  "start": 440,
-  "end": 486,
-  "openingElement": {
-    "type": "JSXOpeningElement",
-    "start": 440,
-    "end": 486,
-    "attributes": [
-      {
-        "type": "JSXAttribute",
-        "start": 457,
-        "end": 477,
-        "name": {
-          "type": "JSXIdentifier",
-          "start": 457,
-          "end": 460,
-          "name": "bar"
-        },
-        "value": {
-          "type": "JSXExpressionContainer",
-          "start": 461,
-          "end": 477,
-          "expression": {
-            "type": "MemberExpression",
-            "start": 462,
-            "end": 476,
-            "object": {
-              "type": "MemberExpression",
-              "start": 462,
-              "end": 472,
-              "object": {
-                "type": "ThisExpression",
-                "start": 462,
-                "end": 466
-              },
-              "property": {
-                "type": "Identifier",
-                "start": 467,
-                "end": 472,
-                "name": "state"
-              },
-              "computed": false
-            },
-            "property": {
-              "type": "Identifier",
-              "start": 473,
-              "end": 476,
-              "name": "bar"
-            },
-            "computed": false
-          }
-        }
-      }
-    ],
-    "name": {
-      "type": "JSXIdentifier",
-      "start": 441,
-      "end": 447,
-      "name": "Biggie"
-    },
-    "selfClosing": true
-  },
-  "closingElement": null,
-  "children": []
+"type": "Property",
+"start": 114,
+"end": 134,
+"method": false,
+"shorthand": false,
+"computed": false,
+"key": {
+"type": "Identifier",
+"start": 114,
+"end": 117,
+"name": "bar"
+},
+"value": {
+"type": "Literal",
+"start": 119,
+"end": 134,
+"value": "yo ima string",
+"raw": "'yo ima string'"
+},
+"kind": "init"
+}
+]
+}
+}
 },
 {
-  "type": "Literal",
-  "start": 486,
-  "end": 493,
-  "value": "\n      ",
-  "raw": "\n      "
+"type": "ExpressionStatement",
+"start": 145,
+"end": 192,
+"expression": {
+"type": "AssignmentExpression",
+"start": 145,
+"end": 191,
+"operator": "=",
+"left": {
+"type": "MemberExpression",
+"start": 145,
+"end": 161,
+"object": {
+"type": "ThisExpression",
+"start": 145,
+"end": 149
+},
+"property": {
+"type": "Identifier",
+"start": 150,
+"end": 161,
+"name": "handleClick"
+},
+"computed": false
+},
+"right": {
+"type": "CallExpression",
+"start": 164,
+"end": 191,
+"callee": {
+"type": "MemberExpression",
+"start": 164,
+"end": 185,
+"object": {
+"type": "MemberExpression",
+"start": 164,
+"end": 180,
+"object": {
+"type": "ThisExpression",
+"start": 164,
+"end": 168
+},
+"property": {
+"type": "Identifier",
+"start": 169,
+"end": 180,
+"name": "handleClick"
+},
+"computed": false
+},
+"property": {
+"type": "Identifier",
+"start": 181,
+"end": 185,
+"name": "bind"
+},
+"computed": false
+},
+"arguments": [
+{
+"type": "ThisExpression",
+"start": 186,
+"end": 190
+}
+]
+}
+}
+}
+]
+}
+}
+},
+{
+"type": "MethodDefinition",
+"start": 200,
+"end": 277,
+"computed": false,
+"key": {
+"type": "Identifier",
+"start": 200,
+"end": 211,
+"name": "handleClick"
+},
+"static": false,
+"kind": "method",
+"value": {
+"type": "FunctionExpression",
+"start": 211,
+"end": 277,
+"id": null,
+"generator": false,
+"expression": false,
+"params": [],
+"body": {
+"type": "BlockStatement",
+"start": 214,
+"end": 277,
+"body": [
+{
+"type": "ReturnStatement",
+"start": 220,
+"end": 273,
+"argument": {
+"type": "CallExpression",
+"start": 227,
+"end": 273,
+"callee": {
+"type": "MemberExpression",
+"start": 227,
+"end": 240,
+"object": {
+"type": "ThisExpression",
+"start": 227,
+"end": 231
+},
+"property": {
+"type": "Identifier",
+"start": 232,
+"end": 240,
+"name": "setState"
+},
+"computed": false
+},
+"arguments": [
+{
+"type": "ObjectExpression",
+"start": 241,
+"end": 272,
+"properties": [
+{
+"type": "Property",
+"start": 249,
+"end": 266,
+"method": false,
+"shorthand": false,
+"computed": false,
+"key": {
+"type": "Identifier",
+"start": 249,
+"end": 252,
+"name": "baz"
+},
+"value": {
+"type": "Literal",
+"start": 254,
+"end": 266,
+"value": "im bazzing",
+"raw": "'im bazzing'"
+},
+"kind": "init"
+}
+]
+}
+]
+}
+}
+]
+}
+}
+},
+{
+"type": "MethodDefinition",
+"start": 281,
+"end": 456,
+"computed": false,
+"key": {
+"type": "Identifier",
+"start": 281,
+"end": 287,
+"name": "render"
+},
+"static": false,
+"kind": "method",
+"value": {
+"type": "FunctionExpression",
+"start": 287,
+"end": 456,
+"id": null,
+"generator": false,
+"expression": false,
+"params": [],
+"body": {
+"type": "BlockStatement",
+"start": 290,
+"end": 456,
+"body": [
+{
+"type": "ReturnStatement",
+"start": 296,
+"end": 452,
+"argument": {
+"type": "JSXElement",
+"start": 310,
+"end": 446,
+"openingElement": {
+"type": "JSXOpeningElement",
+"start": 310,
+"end": 315,
+"attributes": [],
+"name": {
+"type": "JSXIdentifier",
+"start": 311,
+"end": 314,
+"name": "div"
+},
+"selfClosing": false
+},
+"closingElement": {
+"type": "JSXClosingElement",
+"start": 440,
+"end": 446,
+"name": {
+"type": "JSXIdentifier",
+"start": 442,
+"end": 445,
+"name": "div"
+}
+},
+"children": [
+{
+"type": "Literal",
+"start": 315,
+"end": 322,
+"value": "\n      ",
+"raw": "\n      "
+},
+{
+"type": "JSXElement",
+"start": 322,
+"end": 433,
+"openingElement": {
+"type": "JSXOpeningElement",
+"start": 322,
+"end": 433,
+"attributes": [
+{
+"type": "JSXAttribute",
+"start": 342,
+"end": 362,
+"name": {
+"type": "JSXIdentifier",
+"start": 342,
+"end": 345,
+"name": "foo"
+},
+"value": {
+"type": "JSXExpressionContainer",
+"start": 346,
+"end": 362,
+"expression": {
+"type": "MemberExpression",
+"start": 347,
+"end": 361,
+"object": {
+"type": "MemberExpression",
+"start": 347,
+"end": 357,
+"object": {
+"type": "ThisExpression",
+"start": 347,
+"end": 351
+},
+"property": {
+"type": "Identifier",
+"start": 352,
+"end": 357,
+"name": "state"
+},
+"computed": false
+},
+"property": {
+"type": "Identifier",
+"start": 358,
+"end": 361,
+"name": "foo"
+},
+"computed": false
+}
+}
+},
+{
+"type": "JSXAttribute",
+"start": 371,
+"end": 391,
+"name": {
+"type": "JSXIdentifier",
+"start": 371,
+"end": 374,
+"name": "bar"
+},
+"value": {
+"type": "JSXExpressionContainer",
+"start": 375,
+"end": 391,
+"expression": {
+"type": "MemberExpression",
+"start": 376,
+"end": 390,
+"object": {
+"type": "MemberExpression",
+"start": 376,
+"end": 386,
+"object": {
+"type": "ThisExpression",
+"start": 376,
+"end": 380
+},
+"property": {
+"type": "Identifier",
+"start": 381,
+"end": 386,
+"name": "state"
+},
+"computed": false
+},
+"property": {
+"type": "Identifier",
+"start": 387,
+"end": 390,
+"name": "bar"
+},
+"computed": false
+}
+}
+},
+{
+"type": "JSXAttribute",
+"start": 400,
+"end": 424,
+"name": {
+"type": "JSXIdentifier",
+"start": 400,
+"end": 405,
+"name": "click"
+},
+"value": {
+"type": "JSXExpressionContainer",
+"start": 406,
+"end": 424,
+"expression": {
+"type": "MemberExpression",
+"start": 407,
+"end": 423,
+"object": {
+"type": "ThisExpression",
+"start": 407,
+"end": 411
+},
+"property": {
+"type": "Identifier",
+"start": 412,
+"end": 423,
+"name": "handleClick"
+},
+"computed": false
+}
+}
+}
+],
+"name": {
+"type": "JSXIdentifier",
+"start": 323,
+"end": 332,
+"name": "Notorious"
+},
+"selfClosing": true
+},
+"closingElement": null,
+"children": []
+},
+{
+"type": "Literal",
+"start": 433,
+"end": 440,
+"value": "\n      ",
+"raw": "\n      "
+}
+]
+}
+}
+]
+}
+}
+}
+]
+}
+}
+],
+"sourceType": "module"
 }
