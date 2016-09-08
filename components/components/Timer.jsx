@@ -17,7 +17,12 @@ var Timer = React.createClass({
 
   render: function() {
     return (
-      <div style={{ color: "white" }}>Seconds Elapsed: {this.state.secondsElapsed}</div>
+      <div style={{ 
+        color: "white", 
+        position: 'absolute',
+        top: 250,
+        left: 675
+      }}>Seconds Elapsed: {this.state.secondsElapsed}</div>
     );
   }
 });

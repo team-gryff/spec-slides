@@ -7,7 +7,7 @@ const style = {
   width: "280px",
   borderRadius: "3px",
   position: "absolute",
-  top: 240,
+  top: 0,
   left: 700
 };
 

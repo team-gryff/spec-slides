@@ -127,16 +127,26 @@ export default class Presentation extends React.Component {
             </Appear>
           </Slide>
           <Slide transition="fade">
-            <Text textColor="white">Components may have <S type="italic">props</S></Text>
+            <Text 
+              textColor="white"
+              style={{ 
+                position: 'absolute',
+                top: -250,
+                left: 250
+              }}>Components may have <S type="italic">props</S></Text>
             <CodePane
               lang="jsx"
               source={require("raw!../assets/example/HelloMessage.example")}
               margin="20px"
-              style={{ minWidth: "500px", maxWidth: "500px" }}
+              style={{ 
+                minWidth: "500px", 
+                maxWidth: "500px",
+                position: 'absolute',
+                top: -50,
+                left: 25
+               }}
             />
-            <HelloMessage
-              name="Mike"
-            />
+            <HelloMessage name="Mike" />
           </Slide>
           <Slide transition="fade">
             <Text textColor="white">Components may have <S type="italic">state</S></Text>
