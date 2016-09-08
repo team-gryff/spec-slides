@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 
-const FilledNode = ({ xtranslate, ytranslate, name, width, height }) => {
+const ImageNode = ({ xtranslate, ytranslate, name, width, height }) => {
   const style = {
     transform: `translate(${xtranslate}px,${ytranslate}px)`,
     width,
@@ -11,21 +11,14 @@ const FilledNode = ({ xtranslate, ytranslate, name, width, height }) => {
     textDecoration: 'none',
     textOverflow: 'ellipsis',
     };
-    const divStyle = {
-      backgroundColor: '#1565C0',
-      borderTopRightRadius: '5px',
-      borderTopLeftRadius: '5px',
-      width: '100%',
-      height: `${height / 3}`,
-    }
   return (
     <foreignObject style={style}>
-      <div style={divStyle} />
+      <img src={name}/>
     </foreignObject>
   );
 };
 
-FilledNode.propTypes = {
+ImageNode.propTypes = {
   xtranslate: PropTypes.number,
   ytranslate: PropTypes.number,
   name: PropTypes.string,
@@ -33,4 +26,4 @@ FilledNode.propTypes = {
   height: PropTypes.number,
 };
 
-export default FilledNode;
+export default ImageNode;

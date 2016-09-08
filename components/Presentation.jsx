@@ -33,12 +33,16 @@ import createTheme from "spectacle/lib/themes/default";
 
 // Import custom component
 import CodeSlide from 'spectacle-code-slide';
-import D3React from './components/D3React.jsx';
+import Tree from './components/Tree.jsx';
 import DottedNode from './components/DottedNode.jsx';
 import FilledNode from './components/FilledNode.jsx';
+import ImageNode from './components/ImageNode.jsx';
 
 import HelloMessage from './components/HelloMessage.jsx';
 import Timer from './components/Timer.jsx';
+
+import renderTree from './renderTree';
+import higherLevel from './higherLevel';
 
 // Require CSS
 require("normalize.css");
@@ -69,12 +73,22 @@ const images = {
     four: require('../assets/ig_4.svg'),
     five: require('../assets/ig_5.svg'),
   },
+  screenshots: {
+    one: require('../assets/screenshot1.png'),
+    two: require('../assets/screenshot2.png'),
+    three: require('../assets/screenshot3.png'),
+    four: require('../assets/screenshot4.png')
+  },
   monocleFile: require('../assets/monocle_file.svg'),
   arrow: require('../assets/arrow.svg'),
   wrapperSnippet: require('../assets/wrapper_snippet.svg'),
   stateSyncBefore: require('../assets/statesync_before.png'),
-  stateSyncAfter: require('../assets/statesync_after.png')
+  stateSyncAfter: require('../assets/statesync_after.png'),
+  redArrow: require('../assets/arrow.png')
 };
+
+preloader(images);
+
 
 const theme = createTheme({
   primary: "#3498DB"
@@ -88,7 +102,7 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Spectacle theme={theme}>
-        <Deck transition="slide" transitionDuration={500} progress="none">
+        <Deck transition={["slide"]} transitionDuration={500} progress="none">
           <Slide>
             <Heading size={1} fit caps lineHeight={1} textColor="white">
             react monocle
@@ -136,32 +150,29 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide transition="fade">
             <Image width="50%" style={{ float: 'right' }} src={images.instagramSnippets.instagramApp} />
-            <Appear style={{ position: 'absolute', top: 0, left: -100, border: '5px solid #0DEC10' }}><Image src={images.instagramSnippets.postContainer} /></Appear>
             <Appear style={{ position: 'absolute', top: 40, left: 492}}><Image width="47.5%" src={images.instagramBoxes.two} /></Appear>
-            <Appear style={{ position: 'absolute', top: 100, left: 0, border: '5px solid #EB5757' }}><Image src={images.instagramSnippets.post} /></Appear>
+            <Appear style={{ position: 'absolute', top: 0, left: -100, border: '5px solid #0DEC10' }}><Image src={images.instagramSnippets.postContainer} /></Appear>
             <Appear style={{ position: 'absolute', top: 110, left: 527}}><Image width="40%" src={images.instagramBoxes.one} /></Appear>
-            <Appear style={{ position: 'absolute', top: 200, left: 100, border: '5px solid #ECED2B' }}><Image src={images.instagramSnippets.postHeader} /></Appear>
+            <Appear style={{ position: 'absolute', top: 100, left: 0, border: '5px solid #EB5757' }}><Image src={images.instagramSnippets.post} /></Appear>
             <Appear style={{ position: 'absolute', top: 115, left: 505}}><Image width="45.5%" src={images.instagramBoxes.three} /></Appear>
-            <Appear style={{ position: 'absolute', top: 50, left: -50, border: '5px solid #2F80ED' }}><Image src={images.instagramSnippets.commentContainer} /></Appear>
+            <Appear style={{ position: 'absolute', top: 200, left: 100, border: '5px solid #ECED2B' }}><Image src={images.instagramSnippets.postHeader} /></Appear>
             <Appear style={{ position: 'absolute', top: 452, left: 507}}><Image width="43.5%" src={images.instagramBoxes.four} /></Appear>
-            <Appear style={{ position: 'absolute', top: 150, left: 50, border: '5px solid #BB6BD9' }}><Image src={images.instagramSnippets.commentBox} /></Appear>
+            <Appear style={{ position: 'absolute', top: 50, left: -50, border: '5px solid #2F80ED' }}><Image src={images.instagramSnippets.commentContainer} /></Appear>
             <Appear style={{ position: 'absolute', top: 590, left: 525}}><Image width="40.5%" src={images.instagramBoxes.five} /></Appear>
+            <Appear style={{ position: 'absolute', top: 150, left: 50, border: '5px solid #BB6BD9' }}><Image src={images.instagramSnippets.commentBox} /></Appear>
           </Slide>
           <Slide transition="fade">
               <Image src={images.textLogo} margin="10px auto 20px" height="300px"/>
           </Slide>
-          <Slide>
-            <Heading>High-Level Overview</Heading>
-          </Slide>
           <CodeSlide
             transition={['fade']}
             code={require('raw!../assets/deck.example')}
-            lang="js"
+            lang="jsx"
             ranges={[
-              { loc: [0, 1], title: 'ES2015 React Component'},
-              { loc: [0, 1], title: 'Component Name'},
-              { loc: [10, 15], title: 'Methods' },
-              { loc: [19, 24], title: 'Props and Children' },
+              { loc: [0, 10], note: 'ES2015 React Component'},
+              { loc: [0, 1], note: 'Component Name'},
+              { loc: [10, 15], note: 'Methods' },
+              { loc: [19, 24], note: 'Props and Children' },
             ]}
           />
           <CodeSlide
@@ -169,13 +180,13 @@ export default class Presentation extends React.Component {
             code={require('raw!../assets/ast.example')}
             lang="js"
             ranges={[
-              { loc: [0, 1], title: 'Abstract Syntax Tree'},
-              { loc: [5, 15], title: 'Component Name'},
-              { loc: [233, 243], title: 'Methods' },
-              { loc: [519, 525], title: 'Children'},
-              { loc: [395, 405], title: 'Props'},
-              { loc: [440, 450], title: 'More Props'},
-              { loc: [485, 495], title: 'Even More Props'},
+              { loc: [0, 1], note: 'Abstract Syntax Tree'},
+              { loc: [5, 15], note: 'Component Name'},
+              { loc: [233, 243], note: 'Methods' },
+              { loc: [519, 525], note: 'Children'},
+              { loc: [395, 405], note: 'Props'},
+              { loc: [440, 450], note: 'More Props'},
+              { loc: [485, 495], note: 'Even More Props'},
             ]}
           />
           <CodeSlide
@@ -183,13 +194,13 @@ export default class Presentation extends React.Component {
             code={require('raw!../assets/formatted.example')}
             lang="js"
             ranges={[
-              { loc: [0, 1], title: 'Formatted Object'},
-              { loc: [2, 3], title: 'Component Name'},
-              { loc: [3, 4], title: 'Methods' },
-              { loc: [5, 10], title: 'Children'},
-              { loc: [10, 15], title: 'Props'},
-              { loc: [15, 20], title: 'More Props'},
-              { loc: [20, 25], title: 'Even More Props'},
+              { loc: [0, 1], note: 'Formatted Object'},
+              { loc: [2, 3], note: 'Component Name'},
+              { loc: [3, 4], note: 'Methods' },
+              { loc: [5, 10], note: 'Children'},
+              { loc: [10, 15], note: 'Props'},
+              { loc: [15, 20], note: 'More Props'},
+              { loc: [20, 25], note: 'Even More Props'},
             ]}
           />
           <Slide>
@@ -199,7 +210,7 @@ export default class Presentation extends React.Component {
             <Image style={{ position: 'absolute', top: -75, left: 700 }} width="30%" src={images.monocleLogo} />
             <Text textColor="white" style={{ position: 'absolute', top: 200, left: 750 }}>Monocle</Text>
           </Slide>
-          <Slide transition="fade">
+          <Slide transition={["fade"]}>
             <Image style={{ position: 'absolute', top: -100, left: 50 }} width="25%" src={images.monocleFile} />
             <Text textColor="white" style={{ position: 'absolute', top: 200 }}>Developer App</Text>
             <Image style={{ position: 'absolute', top: -350, left: 100 }} src={images.wrapperSnippet} width="100%" />
@@ -219,22 +230,29 @@ export default class Presentation extends React.Component {
             </Appear>
           </Slide>
           <Slide transition={['fade']}>
-            <Heading textSize={50}>node positioning (d3)</Heading>
-            <D3React>
+            <Heading textSize={50}>NODE POSITIONING (D3)</Heading>
+            <Tree treeInfo={renderTree}>
               <DottedNode />
-            </D3React>
+            </Tree>
           </Slide>
           <Slide transition={['fade']}>
-            <Heading textSize={50}>node rendering (react)</Heading>
-            <D3React>
+            <Heading textSize={50}>NODE RENDERING (REACT)</Heading>
+            <Tree treeInfo={renderTree}>
               <FilledNode />
-            </D3React>
+            </Tree>
           </Slide>
           <Slide transition={['fade']}>
-            <Heading textSize={50}>link rendering (d3)</Heading>
-            <D3React links>
+            <Heading textSize={50}>LINK RENDERING (D3)</Heading>
+            <Tree treeInfo={renderTree} links>
               <FilledNode />
-            </D3React>
+            </Tree>
+          </Slide>
+          <Slide>
+            <Appear style={{ position: 'absolute', top: -200, left: -200, border: '1px solid #EEEEEE'}}><Image width="60%" src={images.screenshots.one} /></Appear>
+            <Appear style={{ position: 'absolute', top: -300, left: 480, border: '1px solid #EEEEEE'}}><Image width="60%" src={images.screenshots.two} /></Appear>
+            <Appear style={{ position: 'absolute', top: -350, left: 100, border: '1px solid #EEEEEE'}}><Image width="70%" src={images.screenshots.three} /></Appear>
+            <Appear style={{ position: 'absolute', top: -330, left: 70, border: '1px solid #EEEEEE'}}><Image width="80%" src={images.screenshots.four} /></Appear>
+            <Appear style={{ position: 'absolute', top: -290, left: 185, transform: 'rotate(187deg)'}}><Image width="9%" src={images.redArrow} /></Appear>
           </Slide>
           <Slide>
             <Heading caps>Check Us Out</Heading>
@@ -266,4 +284,19 @@ export default class Presentation extends React.Component {
       </Spectacle>
     );
   }
-}
+};
+
+
+
+
+          // <Slide>
+          //   <Tree
+          //     treeInfo={higherLevel}
+          //     nodeW={170}
+          //     nodeH={170}
+          //     reverse
+          //     links
+          //   >
+          //     <ImageNode />
+          //   </Tree>
+          // </Slide>
