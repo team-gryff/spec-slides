@@ -258,11 +258,11 @@ export default class Presentation extends React.Component {
             </Tree>
           </Slide>
           <Slide>
-            <Appear style={{ position: 'absolute', top: -200, left: -200, border: '1px solid #EEEEEE'}}><Image width="60%" src={images.screenshots.one} /></Appear>
-            <Appear style={{ position: 'absolute', top: -300, left: 480, border: '1px solid #EEEEEE'}}><Image width="60%" src={images.screenshots.two} /></Appear>
-            <Appear style={{ position: 'absolute', top: -350, left: 100, border: '1px solid #EEEEEE'}}><Image width="70%" src={images.screenshots.three} /></Appear>
-            <Appear style={{ position: 'absolute', top: -330, left: 70, border: '1px solid #EEEEEE'}}><Image width="80%" src={images.screenshots.four} /></Appear>
-            <Appear style={{ position: 'absolute', top: -290, left: 185, transform: 'rotate(187deg)'}}><Image width="9%" src={images.redArrow} /></Appear>
+            <Appear style={{ position: 'absolute', top: -200, left: -100, border: '1px solid #EEEEEE'}}><Image width="60%" src={images.screenshots.one} /></Appear>
+            <Appear style={{ position: 'absolute', top: -275, left: 480, border: '1px solid #EEEEEE'}}><Image width="60%" src={images.screenshots.two} /></Appear>
+            <Appear style={{ position: 'absolute', top: -300, left: 125, border: '1px solid #EEEEEE'}}><Image width="70%" src={images.screenshots.three} /></Appear>
+            <Appear style={{ position: 'absolute', top: -260, left: 75, border: '1px solid #EEEEEE'}}><Image width="80%" src={images.screenshots.four} /></Appear>
+            <Appear style={{ position: 'absolute', top: -220, left: 190, transform: 'rotate(187deg)'}}><Image width="9%" src={images.redArrow} /></Appear>
           </Slide>
           <Slide>
             <Heading caps>Check Us Out</Heading>
